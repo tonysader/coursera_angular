@@ -1,17 +1,31 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr" ng-app="myApp">
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <script  src="angular.min.js"></script>
-    <script src="app.js"></script>
-
-    <title></title>
+    <title>Lunch Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <style>
+      .message { font-size: 1.3em; font-weight: bold; }
+    </style>
   </head>
-  <body>
-    <div ng-controller="myController" class="">
-      <input type="text" ng-model="name" ng-blur="upper()" name="" value="">
-        <input type="text" ng-model="last" ng-blur="upper()" name="" value="">
-      <p>Your value is: {{name}}</p>
-    </div>
-  </body>
+<body ng-app="LunchCheck">
+   <div class="container" ng-controller="checkController">
+     <h1>Lunch Checker</h1>
+
+         <div class="form-group">
+             <input id="lunch-menu" ng-model="dishes" type="text"
+             placeholder="{{placeholderTxt}}"
+             class="form-control"> <span> We don't consider space as an item</span>
+         </div>
+         <div class="form-group">
+             <button class="btn btn-default" ng-click="checkDiches()">Check If Too Much</button>
+         </div>
+         <div class="form-group message">
+           <!-- Your message can go here. -->
+           <p>{{message}}</p>
+         </div>
+   </div>
+<script type="text/javascript" src="scripts/angular.min.js"></script>
+<script type="text/javascript" src="scripts/app.js"></script>
+</body>
 </html>
