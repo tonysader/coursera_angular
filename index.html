@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" ng-app="myApp">
   <head>
     <meta charset="utf-8">
+    <script  src="angular.min.js"></script>
+    <script src="app.js"></script>
+
     <title></title>
   </head>
   <body>
-    <h1>Hello </h1>
+    <div ng-controller="myController" class="">
+      <input type="text" ng-model="name" ng-blur="upper()" name="" value="">
+        <input type="text" ng-model="last" ng-blur="upper()" name="" value="">
+      <p>Your value is: {{name}}</p>
+    </div>
   </body>
 </html>
